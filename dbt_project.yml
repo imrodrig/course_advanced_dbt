@@ -38,6 +38,14 @@ models:
         +schema: finance
       product:
         +schema: product
+  
+  # hiding a dbt package: the models folder for this package will not be displayed in documentation
+  # yet this only hide the models folder. References to the package (macros, seeds) still displayed in docs
+  # https://github.com/dbt-labs/dbt-core/issues/8061
+  dbt_project_evaluator:
+    +docs:
+      show: false
+
 
 seeds:
   dbt_project_evaluator:
