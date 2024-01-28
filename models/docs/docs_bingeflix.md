@@ -9,7 +9,7 @@ This table stores information about Bingeflix users, including user IDs, usernam
 {% enddocs %}
 
 {% docs bingeflix_column_user_id %}
-The unique identifier of the Bingeflix user. A user is created when...
+The unique identifier of the Bingeflix user. 
 {% enddocs %}
 
 
