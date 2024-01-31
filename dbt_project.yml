@@ -53,8 +53,9 @@ seeds:
       +enabled: false
 
 # set your model fanout threshold to 10 instead of 3: to avoid is_empty_fct_model_fanout_ warning
-vars:
-  dbt_project_evaluator:
-    models_fanout_threshold: 10
+# comment to revert to a threshold of 3
+# vars:
+#   dbt_project_evaluator:
+#     models_fanout_threshold: 10
 
 on-run-end: "{{ dbt_project_evaluator.print_dbt_project_evaluator_issues() }}"
