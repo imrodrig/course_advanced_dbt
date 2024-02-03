@@ -32,3 +32,5 @@ repos:
   - id: check-script-has-no-table-name # Ensures models only use source or ref macro to specify the table name.
   - id: check-model-has-all-columns # Ensures that mart models have all columns in the database also specified in the .yml
     files: ^models/marts
+  - id: check-model-tags # Ensures any models in the core folder only have tags of "hourly", "daily", "weekly", or "monthly"
+    args: ["--tags", "hourly", "daily", "weekly", "monthly", "p0", "--"]
