@@ -1,5 +1,3 @@
-{{ config(materialized='table') }}
-
 SELECT
     session_id,
     created_at,
@@ -8,3 +6,6 @@ SELECT
     event_id
 
 FROM {{ ref('stg_bingeflix__events') }}
+
+WHERE
+    {{ limit_data_in_nonprd(ref_date = 'created_at') }}

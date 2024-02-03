@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: rpt_model_a
+    description: "select * from information_schema.databases"
+    columns:
+      - name: database_name
+        description: ""
+        tests:
+          - not_null
+          - unique
+
+      - name: database_owner
+        data_type: number
+        description: ""
+        tests:
+          - not_null

@@ -1,0 +1,37 @@
+models:
+  - name: rpt_limit_events
+    description: This model contains information about the behavioral events of users while they interact with the Bingeflix platform.
+    meta:
+      priority: high
+      owner:
+        - lindsay
+    columns:
+      - name: session_id
+        description: The unique identifier of the session in the Bingeflix application.
+        meta:
+          priority: high
+        tests:
+          - not_null
+
+      - name: user_id
+        description: '{{ doc("bingeflix_column_user_id") }}'
+        meta:
+          priority: high
+        tests:
+          - not_null
+
+      - name: created_at
+        description:  When the event was logged.
+        tests:
+          - not_null
+
+      - name: event_name
+        description: The name of the event.
+        tests:
+          - not_null
+
+      - name: event_id
+        description: The unique identifier of the event.
+        tests:
+          - not_null
+          - unique

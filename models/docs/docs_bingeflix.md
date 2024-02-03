@@ -9,7 +9,7 @@ This table stores information about Bingeflix users, including user IDs, usernam
 {% enddocs %}
 
 {% docs bingeflix_column_user_id %}
-The unique identifier of the Bingeflix user. 
+The unique identifier of the Bingeflix user.
 {% enddocs %}
 
 
@@ -29,7 +29,7 @@ This table contains information about the subscription plans available at Bingef
 {% enddocs %}
 
 {% docs bingeflix_column_subscription_plan_id %}
-The unique identifier of a Bingeflix Subscription Plan. 
+The unique identifier of a Bingeflix Subscription Plan.
 {% enddocs %}
 
 
@@ -48,5 +48,3 @@ This section contains documentation from the Bingeflix Ads table.
 {% docs bingeflix_table_ads %}
 This table contains information about Bingeflix's marketing ads.
 {% enddocs %}
-
-

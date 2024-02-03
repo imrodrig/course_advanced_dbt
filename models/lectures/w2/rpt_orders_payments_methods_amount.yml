@@ -1,0 +1,32 @@
+version: 2
+
+models:
+  - name: rpt_orders_payments_methods_amount
+    description: "model for orders_payments_methods_amount"
+    columns:
+      - name: order_id
+        data_type: number
+        description: ""
+        tests:
+          - not_null
+          - unique
+
+      - name: total_amount
+        data_type: number
+        description: ""
+
+      - name: bank_transfer_amount
+        data_type: number
+        description: ""
+
+      - name: credit_card_amount
+        data_type: number
+        description: ""
+
+      - name: gift_card_amount
+        data_type: number
+        description: ""
+
+      - name: corn_cobs_amount
+        data_type: number
+        description: ""

@@ -24,10 +24,10 @@ models:
     +materialized: view
     +grants:
       select: ['transformer', 'reporter']
-    
+
     staging:
       +schema: staging
-    
+
     intermediate:
       +schema: intermediate
 
@@ -38,11 +38,20 @@ models:
         +schema: finance
       product:
         +schema: product
-  
+
+    lectures:
+      w2:
+        +schema: w2
+      w3:
+        +schema: w3
+      w4:
+        +schema: w4
+
   # hiding a dbt package: the models folder for this package will not be displayed in the documentation and DAG.
   # yet this only hide the models folder. References to the package (macros, seeds) still displayed in docs
   # https://github.com/dbt-labs/dbt-core/issues/8061
   dbt_project_evaluator:
+    +schema: "pkg_project_evaluator"
     +docs:
       show: false
 

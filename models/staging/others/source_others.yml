@@ -1,0 +1,8 @@
+sources:
+  - name: others
+    schema: information_schema
+    description: "list of databases in the snowflake account"
+    database: dev
+    tables:
+      - name: databases
+        description:  "list of databases in the snowflake account"

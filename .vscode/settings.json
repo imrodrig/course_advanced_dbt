@@ -20,6 +20,24 @@
             "password": "Tymz8m6yV@WBq",
             "database": "DEV",
             "warehouse": "TRANSFORMING"
+        },
+        {
+            "authenticator": "SNOWFLAKE",
+            "ocspOptions": {
+                "ocspFailOpen": true
+            },
+            "snowflakeOptions": {
+                "clientSessionKeepAlive": true,
+                "clientSessionKeepAliveHeartbeatFrequency": 3600
+            },
+            "previewLimit": 50,
+            "driver": "Snowflake",
+            "name": "course_adv_dbt",
+            "username": "imrodrigucscedu",
+            "password": "!AdvDBTJan24",
+            "database": "dev",
+            "warehouse": "transforming",
+            "account": "efruuit-zh04827"
         }
     ]
 }
