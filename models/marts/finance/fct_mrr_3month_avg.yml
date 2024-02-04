@@ -1,0 +1,16 @@
+models:
+  - name: fct_mrr_3month_avg
+    description: This model contains the 3-month moving average of mrr_amount
+
+    columns:
+      - name: date_month
+        description: The calendar month.
+        tests:
+          - not_null
+          - unique
+
+      - name: total_mrr
+        description: The sum of mrr_amount of monthly recurring revenue generated from all subscriptions in a given month.
+
+      - name: avg_3_weeks_total_mrr
+        description: the 3-month moving average of mrr_amount

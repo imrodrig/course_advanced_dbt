@@ -15,8 +15,10 @@ monthly_subscriptions AS (
         ends_at,
         plan_name,
         pricing,
-        DATE(DATE_TRUNC('month', starts_at)) AS start_month,
-        DATE(DATE_TRUNC('month', ends_at)) AS end_month
+        {{ trunc_to_period(date_column="starts_at", period="month", alias_name='start_month') }},
+        {{ trunc_to_period(date_column='ends_at', period='month', alias_name='end_month') }}
+        --DATE(DATE_TRUNC('month', starts_at)) AS start_month,
+        --DATE(DATE_TRUNC('month', ends_at)) AS end_month
     FROM
         {{ ref('dim_subscriptions') }}
     WHERE
