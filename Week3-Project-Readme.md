@@ -1,23 +1,13 @@
 # Course-Advanced-dbt: Project Week 3
 
-#### Objectives
-- types of dbt tests and testing strategies
--- built-in generic tests: not null, unique, relatonships, accepted values
-- which type of test to use for each scenario
-- write custom specific and generic tests
-- other data quality tools and methodologies (unit tests)
-
 ##### _(1) Identify a few redundant tests that can be removed_
 
 ###### Identify and remove at least 3 redundant tests from the project. Provide a short explanation in your project submission for how/why you identified which tests to remove
 - I found the same tests defined in sources and staging models that did not performed data transformation. These tests likely don't need to be repeated.
--- Same `accepted_values` test is defined on source `subscription_plans` and stage model `stg_bingeflix__subscription_plans`. Removed tests from stg model.
--- Same `accepted_values` test is defined on source `users` and stage model `stg_bingeflix__users`. Removed tests from stg model.
--- Removed most of the `not null` tests from `dim_users` model because it builds on the `stg_bingeflix__users` model without any filtering. Preserved the PK tests on the dimensional model.
--- Removed most of the `not null` tests from `stg_bingeflix__users` model because it builds on the `users` source without any filtering.
-
-- Updated the testing conventions listed in the `README.md` file to document.
-
+- Same `accepted_values` test is defined on source `subscription_plans` and stage model `stg_bingeflix__subscription_plans`. Removed tests from stg model.
+- Same `accepted_values` test is defined on source `users` and stage model `stg_bingeflix__users`. Removed tests from stg model.
+- Removed most of the `not null` tests from `dim_users` model because it builds on the `stg_bingeflix__users` model without any filtering. Preserved the PK tests on the dimensional model.
+- Removed most of the `not null` tests from `stg_bingeflix__users` model because it builds on the `users` source without any filtering.
 
 ##### _(2)  Write a custom generic test to replace a redundant singular test_
 
