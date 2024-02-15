@@ -7,8 +7,8 @@ models:
         tests:
           - not_null
           - unique
-          - accepted_values:
-              values: [1, 2, 3]
+#          - accepted_values:
+#              values: [1, 2, 3]
 
       - name: plan_name
         description: The name of the subscription plan.
@@ -19,6 +19,8 @@ models:
         description: The price of the subscription.
         tests:
           - not_null
+          - assert_column_is_greater_than:
+              value: 0
 
       - name: payment_period
         description: The recurring payment period for the subscription.

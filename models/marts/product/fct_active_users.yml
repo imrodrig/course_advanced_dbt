@@ -16,3 +16,7 @@ models:
 
       - name: LOGIN_COUNT
         description: The total number of logins for a given user in a given week.
+        tests:
+          - column_is_positive
+          - assert_column_is_greater_than:
+              value: 0
