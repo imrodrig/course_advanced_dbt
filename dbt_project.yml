@@ -61,6 +61,11 @@ seeds:
     dbt_project_evaluator_exceptions:
       +enabled: false
 
+  course_advanced_dbt:
+    unit_testing:
+      +schema: unit_testing
+      +tags: unit_testing
+
 # set your model fanout threshold to 10 instead of 3: to avoid is_empty_fct_model_fanout_ warning
 # comment to revert to a threshold of 3
 # vars:
